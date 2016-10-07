@@ -1,0 +1,1634 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "reset";
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "_retina";
+@import "../../app/img/_sprite-file";
+@import "../../app/img/_sprite-file@2x";
+
+@media screen  and (max-width: 767px) { 
+	body {
+		@include display(flex);
+	}
+
+	.wrapper {
+		width: 100%;
+		position: relative;
+		text-align: center;
+	}	
+
+	.header-box {
+		height: 537px;
+		position: relative;
+		color: white;
+		background: url(../img/desktop/header-background.jpg);
+		background-position-x: center;
+
+		&__login {
+			top: 20px;
+			overflow: hidden;
+			font: 14px $font-leader;
+			position: relative;
+			text-align: center;
+			
+			&--logo {
+				display: none;
+			}
+
+			&--in {
+				width: 90px;
+				text-align: center;
+				padding: 7px 2px;
+				cursor: pointer;
+				display: inline-block;
+			}	
+
+			&--in:hover {
+				padding: 5px 0;
+				border: 2px solid white;
+				border-radius: 18px;
+			}
+		}
+
+		&__logo {
+			height: 173px;
+			position: relative;
+			@include transform (translateY(81%));
+			transform: translateY(80%);
+			text-align: center;
+
+			&--name-company {
+				font: 20px $font-leader ;
+				padding: 0px 30px 25px 25px;
+			}
+
+			&--title {
+
+				font: 30px $font-leader;
+				text-transform: uppercase;
+
+				letter-spacing: 0.4px;
+
+				display: block;
+			}
+
+			&--subtitle{
+				font: 18px $font-slogan;
+				padding: 7px 27px;
+				display: inline-block;
+				width: 260px;
+			}
+		}
+
+		&__search-partners {
+			height: 40px;
+			position: relative;
+			top: 155px;
+			font: 14px $font-leader;
+			letter-spacing: 0.3px;
+			background-color: $lead-color;
+			border-radius: 18px;
+			cursor: pointer;
+			text-align: center;
+			width: 280px;
+			margin: 0 auto;
+			
+			&--slogan {
+				padding: 12px 50px;
+				letter-spacing: 0px;
+			}
+		}
+
+		&__search-partners:hover {
+
+			background-color:  $hover-color;
+		}
+
+	}
+
+	.jcarousel-wrapper{
+	  position: relative;
+	  width: 320px;
+	  margin: 0 auto;
+	  
+	  &__title {
+	  	font: 22px $font-leader;
+	  	color: $title-color;
+	  	text-align: center;
+	  	letter-spacing: 0px;
+	  	margin: 34px 0 14px;
+	  }
+	}
+
+
+	 .jcarousel {
+	  position: relative;
+	  overflow: hidden;
+	  width: 300px;
+	  margin: 0 auto;
+	  margin-bottom: 7px;
+	  
+		&__list  {
+		  position: relative;
+		  list-style: none;
+		  padding: 0;
+		  margin-bottom: 0px;
+		  width: 20000em;
+
+		}
+		
+
+		&__slide {
+		  float: left;
+
+		}
+		  	&__image--mobile {
+		  		width: 100%;
+
+		  	}
+		  	&__image--tablet {
+		  		display: none;
+		  	}
+		  	&__image--desktop {
+		  		display: none;
+		  	}
+	}
+	.jcarousel-control-prev,
+	.jcarousel-control-next {
+	  top: 95px;
+	  left: 10px;
+	  position: absolute;
+	  z-index: 3;
+	  display: none;
+	}
+
+	.jcarousel-control-next {
+			left: 256px; 
+
+	} 
+	.jcarousel-content {
+		position: absolute;
+		width: 93%;
+		top: 28%;
+		color: white;
+		left: 6.5%;
+		overflow: hidden;
+		text-align: left;;
+
+		&--step-two {
+			top: 40.5%;
+			left: 6%;
+		}
+
+		&__link{
+			width: 70px;
+			padding: 5px 0;
+			background-color: $lead-color;
+			font: 10px $font-step;
+			cursor: pointer;
+			display: inline-block;
+			text-align: center;
+			position: relative;
+			border-radius: 10px;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+		}
+
+		&__link:hover {
+			background-color: $hover-color;
+		}
+
+		&__title {
+			font: 24px $font-leader;
+			padding-top: 14px;
+			letter-spacing: 0px;
+		}
+
+		&__subtitle {
+			font: 14px $font-slogan;
+			padding-top: 9px;
+		}
+	}
+
+	.partners {
+		width: 320px;
+		text-align: center;
+		position: relative;
+		margin: 0 auto;
+		&__title {
+			margin: 30px 15px 14px;
+			font: 22px $font-leader;
+	  		color: $title-color;
+	  		text-align: center;
+	  		letter-spacing: 0px;
+		}
+
+		&__box {
+			position: relative;
+	  		overflow: hidden;
+	  		width: 300px;
+	  		margin: 0 auto;
+			margin-bottom: 16px;
+
+			&--heather {
+				position: relative;
+				top: 260px;
+				margin-bottom: 7px;
+			}
+
+			&--lucas {
+				position: relative;
+				top: -223px;
+			}
+
+		}
+
+		&__sprite {
+			position: absolute;
+			display: inline-block;
+			top: 85px;
+			right: 86px;
+	
+
+			&--first {
+				@include sprite($sprite1);
+			}
+
+			&--second {
+				@include sprite($sprite2);
+			}
+
+			&--third {
+				@include sprite($sprite3);
+			}
+
+			&--fourth {
+				@include sprite($sprite4);
+			}
+		}
+
+		&__name {
+			font: 14px $font-leader;
+			padding-top: 15px;
+		} 
+
+		&__description {
+			font: 14px $font-slogan;
+			width: 77.5%;
+			padding: 10px 34px;;
+		}
+
+		&__ohter-partners {
+			padding: 10px 0;
+			display: inline-block;
+			font: 14px $font-leader;
+			background-color: white;
+			border: 2px solid $lead-color;
+			border-radius: 18px;
+			color: $lead-color;
+			cursor: pointer;
+			width: 280px;
+
+		}
+		&__ohter-partners:hover {
+			border: 2px solid $hover-color;
+			background-color: $hover-color;
+			color: white;
+		}
+	}
+
+	.activity-grid {
+		width: 320px;
+		text-align: center;
+		margin: 0 auto;
+
+		&__title {
+			font: 22px $font-leader;
+			padding-top: 34px;
+			padding-bottom: 5px;
+			letter-spacing: 0px;
+			color: #333333;
+		}
+
+		&--box {
+			height: 993px;
+			background-color:  #ff4e50;
+		}
+	}
+
+
+		.grid {
+		max-width: 768px;
+		max-height: 910px;
+
+		&__item {
+		float: left;
+		height: 122px;
+		margin: 5px 10px 3px;
+		width: 300px;
+		border-radius: 6px;
+
+			&--text {
+				font: 22px $font-leader;
+				color: white;
+				position: relative;
+				top: 44%;
+			}
+			&--text3 {
+				top: 35%;
+			}
+			&--text1:after {
+				content: 'Sport and Activity';
+			}
+			&--text2:after {
+				content: 'Wellnes and Health';
+			}
+			&--text3:after {
+				content: 'Extreme Sports and Expeditions';
+			}
+			&--text4:after {
+				content: 'Games';
+			}
+			&--text5:after {
+				content: 'Culture and Education';
+			}
+			&--text6:after {
+				content: 'Relaxation';
+			}
+			&--text7:after {
+				content: 'Travelling';
+			}
+
+			&--text:hover {
+				color: $lead-color;
+				@include transition (all 300ms ease-in);
+			}
+
+			&--outside {
+			}
+		}
+	}
+
+	.grid:after {
+ 		 content: '';
+  		display: block;
+  		clear: both;
+	}
+
+	.search {
+		width: 100%;
+		position: relative;
+		height: 266px;
+		
+		&__box {
+				width: 320px;
+				margin: 0 auto;
+
+			
+
+			&__title {
+				font: 22px $font-leader;
+				padding-top: 34px;
+				padding-bottom: 0;
+				letter-spacing: 0px;
+				color: #333333;
+				position: relative;
+				display: block;
+
+			}
+
+			&__subtitle {
+				width: 100%;
+				padding: 7px 0 17px;
+				font: 18px $font-slogan;
+				display: inline-block;
+				clear: both;
+			}
+
+			&__input {
+				width: 260px;
+				height: 38px;
+				border-radius: 5px;
+				border: 1px solid #e0dede;
+				padding: 0 9px;
+				display: inline-block;
+			}
+
+			&__input:focus {
+				outline: none;
+				@include box-shadow(rgba(138,136,138,1));
+			}
+
+			&__submit {
+				margin: 0 auto;
+				width: 280px; 
+				height: 40px;
+				top: 155px;
+				font: 14px $font-leader;
+				letter-spacing: 0.3px;
+				background-color: $lead-color;
+				border-radius: 18px;
+				cursor: pointer;
+				text-align: center;
+				border: 1px solid $lead-color;
+				color: white;
+				position: static;
+				margin-top: 10px;
+				display: block;
+
+			}
+
+			&__submit:hover {
+				border: 1px solid $hover-color;
+				background-color: $hover-color;
+			}
+
+			&__submit:focus {
+				outline: none;
+			}
+		}
+
+
+	}
+
+	.footer-box {
+		width: 100%;
+		border-top: 5px solid $lead-color;
+
+		&__logo--tablet {
+			display: none;
+		}
+
+		&__title {
+			color: $lead-color ;
+			font: 16px $font-leader;
+			padding: 14px 0 ;
+			letter-spacing: 0.5px ;
+		}
+
+		&__nav-title {
+			font: 14px $font-leader;
+			color: $title-color;
+		}
+		&__nav-list {
+			padding-bottom: 10px;
+		}
+
+		&__nav-item {
+			display: inline-block;
+			padding: 2px 5px;
+		}
+
+		&__nav-link {
+			font: 14px $font-slogan;
+			text-decoration: none;
+			color: $title-color * 2;
+		}
+
+		&__nav-link:hover {
+			color: $title-color;
+		}
+
+		&__partners {
+			font: 14px $font-leader;
+			color: $title-color;
+
+			 &--design {
+			 	display: block;
+			 	font: 10px $font-leader;
+			 	color: #333333 * 4;
+			 	padding: 13px 0 8px;
+			 	letter-spacing: 1.5px;
+			 }
+		}
+	}
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	body {
+		@include display(flex);
+	}
+
+	.wrapper {
+		width: 100%;
+		position: relative;
+		text-align: center;
+		background: url(../img/desktop/header-background.jpg) no-repeat;
+		background-position-x: center;
+	}	
+	
+	.header-box {
+		height: 690px;
+		position: relative;
+		color: white;
+		margin: 0 auto;
+		margin-bottom: 94px;
+		width: 748px;
+
+		&__login {
+			top: 20px;
+			font: 14px $font-leader;
+			position: relative;
+			text-align: center;
+			height: 45px;
+			float: left;
+			width: 748px;
+
+			&--logo {
+				font: 20px $font-leader;
+				letter-spacing: 0.5px;
+				float: left;
+				padding: 16px 51px;
+			}
+			
+			&--in {
+				width: 90px;
+				text-align: center;
+				padding: 7px 2px;
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				top: 10px;
+				left: 14%;
+			}	
+
+			&--in:hover {
+				padding: 5px 0;
+				border: 2px solid white;
+				border-radius: 18px;
+			}
+		}
+
+		&__logo {
+			height: 173px;
+			position: relative;
+			@include transform (translateY(81%));
+			transform: translateY(92%);
+			text-align: center;
+			clear: both;
+
+			&--name-company {
+				font: 20px $font-leader ;
+				padding: 0px 30px 25px 25px;
+				display: none ;
+			}
+
+			&--title {
+
+				font: 52px Montserrat Bold, sans-serif;
+				text-transform: uppercase;
+
+				letter-spacing: 0.25px;
+
+				display: block;
+			}
+
+			&--subtitle{
+				font: 24px Roboto Light, sans-serif;
+				display: inline-block;
+				padding: 23px 0;
+			}
+		}
+
+		&__search-partners {
+			height: 40px;
+			position: relative;
+			top: 198px;
+			font: 14px $font-leader;
+			letter-spacing: 0.3px;
+			background-color: $lead-color;
+			border-radius: 18px;
+			cursor: pointer;
+			text-align: center;
+			width: 225px;
+			margin: 0 auto;
+			
+			&--slogan {
+				letter-spacing: 0px;
+				padding: 12px 6px;
+				width: 92%;
+			}
+		}
+
+		&__search-partners:hover {
+			background-color:  $hover-color;
+		}
+
+	}
+
+	.jcarousel-wrapper{
+	  position: relative;
+	  width: 748px;
+	  margin: 0 auto;
+	  margin-bottom: 83px;
+	  
+	  &__title {
+	  	font: 22px $font-leader;
+	  	color: $title-color;
+	  	text-align: center;
+	  	letter-spacing: 0px;
+	  	margin-bottom: 33px;
+	  }
+	}
+
+
+	 .jcarousel {
+	  margin: 0 auto;
+	  margin-bottom: 7px;
+	  display: inline-block;
+	  position: relative;
+	  width: 236px;
+	  height: 404px;
+	  overflow: hidden;
+	  	&--left {
+	  		left: -17px;
+	  	}
+		
+
+		&--right {
+			right: -16px;
+		}
+
+	  
+		&__list  {
+		  width: 20000em;
+		  position: relative;
+		  list-style: none;
+		  padding: 0;
+		  margin-bottom: 0px;	
+		}
+
+		&__slide {
+		  float: left;
+
+		}
+
+		&__image--mobile {
+		  	display: none;
+		  }
+		
+		&__image--tablet {
+			width: 100%;
+		}
+
+		&__image--desktop {
+		 display: none;
+		}
+	}
+	.jcarousel-control-prev,
+	.jcarousel-control-next {
+	  position: absolute;
+	  top: 41px;
+	  left: 15px;
+	  z-index: 3;
+	}
+
+	.jcarousel-control-next {
+			left: 190px; 
+
+	} 
+	.jcarousel-content {
+		position: absolute;
+		width: 89%;
+		top: 52.5%;
+		color: white;
+		left: 8.5%;
+		overflow: hidden;
+		text-align: left;;
+
+		&--step-two {
+			top: 64%;
+			left: 7.5%;
+		}
+
+		&__link{
+			width: 70px;
+			padding: 5px 2px;
+			background-color: $lead-color;
+			font: 10px $font-step;
+			cursor: pointer;
+			display: inline-block;
+			text-align: center;
+			position: relative;
+			border-radius: 10px;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+		}
+
+		&__link:hover {
+			background-color: $hover-color;
+		}
+
+		&__title {
+			font: 24px $font-leader;
+			padding-top: 14px;
+			letter-spacing: 0px;
+		}
+
+		&__subtitle {
+			font: 14px $font-slogan;
+			padding-top: 8px;
+		}
+	}
+
+	.partners {
+		width: 748px;
+		text-align: center;
+		position: relative;
+		margin: 0 auto 60px;
+		&__title {
+	  		margin: 30px 15px 14px;
+			font: 22px $font-leader;
+	  		color: $title-color;
+	  		text-align: center;
+	  		letter-spacing: 0px;			
+		}
+
+		&__box {
+			position: relative;
+	  		overflow: hidden;
+	  		margin: 0 auto;
+			display: inline-block;
+			margin-bottom: 16px;
+			top: 16px;
+			left: 5px;
+			height: 242px;
+			width: 260px;
+
+			&--bredley {
+				left: -2px;
+			}
+			&--heather {
+				margin-bottom: 7px;
+				left: -4px;
+				top: 9px;
+			}
+
+			&--lucas {
+			}
+
+
+		}
+
+		&__sprite {
+			position: absolute;
+			display: inline-block;
+			top: 84px;
+			right: 66px;
+
+			&--first {
+				@include sprite($sprite1);
+			}
+
+			&--second {
+				@include sprite($sprite2);
+			}
+
+			&--third {
+				@include sprite($sprite3);
+			}
+
+			&--fourth {
+				@include sprite($sprite4);
+			}
+		}
+
+		&__name {
+			font: 14px $font-leader;
+			padding-top: 15px;
+		} 
+
+		&__description {
+			font: 14px $font-slogan;
+			width: 77.5%;
+			padding: 11px 19px;
+			line-height: 17px;;
+		}
+
+		&__ohter-partners {
+			display: block;
+			font: 14px $font-leader;
+			background-color: white;
+			border: 2px solid $lead-color;
+			border-radius: 19px;
+			color: $lead-color;
+			cursor: pointer;
+			width: 186px;
+			padding: 10px 0;
+			margin: 26px auto 0;
+
+		}
+		&__ohter-partners:hover {
+			border: 2px solid $hover-color;
+			background-color: $hover-color;
+			color: white;
+		}
+	}
+
+
+
+	.activity-grid {
+		width: 748px;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 92px;
+
+		&__title {
+			font: 22px $font-leader;
+			padding-top: 34px;
+			padding-bottom: 25px;
+			letter-spacing: 0px;
+			color: #333333;
+		}
+
+		&--box {
+			height: 993px;
+			background-color:  #ff4e50;
+		}
+	}
+
+
+		.grid {
+		max-height: 983px;
+		max-width: 748px;
+
+		&__item {
+		float: left;
+		height: 310px;
+		margin: 10px 6px;
+		width: 235px;
+		border-radius: 6px;
+
+			&--text {
+				font: 22px $font-leader;
+				color: white;
+				position: relative;
+				top: 44%;
+			}
+			&--text3 {
+				top: 35%;
+			}
+			&--text1:after {
+				content: 'Sport and Activity';
+			}
+			&--text2:after {
+				content: 'Wellnes and Health';
+			}
+			&--text3:after {
+				width: 80%;
+				content: 'Extreme Sports and Expeditions';
+			}
+			&--text4:after {
+				content: 'Games';
+			}
+			&--text5:after {
+				content: 'Culture and Education';
+			}
+			&--text6:after {
+				content: 'Relaxation';
+			}
+			&--text7:after {
+				content: 'Travelling';
+			}
+
+			&--text:hover {
+				color: $lead-color;
+				@include transition (all 300ms ease-in);
+			}
+
+			&--width2 {
+				width: 485px;
+			}
+
+			&--outside {
+			}
+		}
+	}
+
+	.grid:after {
+ 		 content: '';
+  		display: block;
+  		clear: both;
+	}
+	.search {
+		position: relative;
+		margin: 0 auto;
+		height: 256px;
+		width: 748px;
+		
+		&__box {
+
+			&__title {
+				font: 22px $font-leader;
+				letter-spacing: 0px;
+				color: #333333;
+				position: relative;
+				display: block;
+				padding-bottom: 0;
+
+			}
+
+			&__subtitle {
+				font: 18px $font-slogan;
+				display: inline-block;
+				width: 100%;
+				clear: both;
+				padding: 29px 0 27px;
+			}
+
+			&__input {
+				width: 225px;
+				height: 38px;
+				border-radius: 5px;
+				border: 1px solid #e0dede;
+				padding-left: 10px;
+				display: inline-block;
+				position: relative;
+				left: -3px;
+			}
+
+			
+
+			&__submit {
+				width: 158px; 
+				height: 40px;
+				margin: 10px auto 0;
+				font: 14px $font-leader;
+				letter-spacing: 0.3px;
+				background-color: $lead-color;
+				border-radius: 18px;
+				cursor: pointer;
+				text-align: center;
+				border: 1px solid $lead-color;
+				color: white;
+				right: -8px;
+				position: relative;
+
+			}
+
+			&__submit:hover {
+				border: 1px solid $hover-color;
+				background-color: $hover-color;
+			}
+			&__input:focus {
+				outline: none;
+				@include box-shadow(rgba(138,136,138,1));
+			}
+
+			&__submit:focus {
+				outline: none;
+			}
+		}
+
+
+	}
+	
+	.footer {
+		width: 100%;
+		border-top: 5px solid $lead-color;
+	}
+	.footer-box {
+		width: 748px;
+		height: 200px;
+		margin: 0 auto;
+
+		&__logo {
+			display: none;
+		}
+
+		&__logo--tablet {
+		position: relative;
+		top: 40px;
+		left: 19.300000000000001%;
+		}
+
+		&__title {
+			color: $lead-color ;
+			font: 16px $font-leader;
+			letter-spacing: 0.5px ;
+			float: left ;
+			padding: 34px 5.3% ;
+		}
+
+		&__nav-title {
+			font: 14px $font-leader;
+			color: $title-color;
+			float: left;;
+			position: relative;
+			padding-bottom: 13px;
+		}
+		&__nav-list {
+			padding-bottom: 10px;
+			clear: both;
+			left: 34.5%;
+			float: left;
+			text-align: left;
+			position: relative;
+			top: -51px;;
+		}
+
+		&__nav-item {
+			padding: 2px 5px;
+			clear: both;
+		}
+
+		&__nav-link {
+			font: 14px $font-slogan;
+			text-decoration: none;
+			color: $title-color * 2;
+		}
+
+		&__nav-link:hover {
+			color: $title-color;
+		}
+
+		&__partners {
+			font: 14px $font-leader;
+			color: $title-color;
+			display: inline-block;
+			position: relative;
+			top: 8px;
+			left: 4%;
+
+			 &--design {
+			 	display: none;
+			 	font: 10px $font-leader;
+			 	color: #333333 * 4;
+			 	padding: 13px 0 8px;
+			 	letter-spacing: 1.5px;
+			 }
+		}
+	}
+} 
+
+@media screen and (min-width: 1024px)  {
+	body {
+		@include display(flex);
+	}
+
+	.wrapper {
+		width: 100%;
+		position: relative;
+		text-align: center;
+		background: url(../img/desktop/header-background.jpg) no-repeat;
+	}	
+	
+	.header-box {
+		height: 690px;
+		position: relative;
+		color: white;
+		background-position-x: center;
+		width: 940px;
+		margin: 0 auto 94px;
+
+		&__login {
+			top: 20px;
+			font: 14px $font-leader;
+			position: relative;
+			text-align: center;
+			height: 45px;
+			float: right;
+			width: 100%;
+
+			&--logo {
+				font: 20px $font-leader;
+				letter-spacing: 0.7px;
+				float: left;
+				padding: 16px 3px 0;
+			}
+			
+			&--in {
+				width: 90px;
+				padding: 7px 2px;
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				left: 28%;
+				top: 11px;
+			}	
+
+			&--in:hover {
+				padding: 5px 0;
+				border: 2px solid white;
+				border-radius: 18px;
+			}
+		}
+
+		&__logo {
+			height: 250px;
+			position: relative;
+			@include transform (translateY(81%));
+			transform: translateY(64%);
+			text-align: center;
+			/*top: 20%;*/
+
+			&--name-company {
+				font: 20px $font-leader ;
+				padding: 0px 30px 25px 25px;
+				display: none ;
+			}
+
+			&--title {
+
+				font: 52px Montserrat Bold, sans-serif;
+				text-transform: uppercase;
+
+				letter-spacing: 0.25px;
+
+				display: block;
+			}
+
+			&--subtitle{
+				font: 24px Roboto Light, sans-serif;
+				display: inline-block;
+				padding: 23px 0;
+			}
+		}
+
+		&__search-partners {
+			height: 40px;
+			position: relative;
+			top: 166px;
+			font: 14px $font-leader;
+			letter-spacing: 0.3px;
+			background-color: $lead-color;
+			border-radius: 18px;
+			cursor: pointer;
+			text-align: center;
+			width: 225px;
+			margin: 0 auto;
+			
+			&--slogan {
+				letter-spacing: 0px;
+				padding: 12px 6px;
+				width: 92%;
+			}
+		}
+
+		&__search-partners:hover {
+			background-color:  $hover-color;
+		}
+
+	}
+
+	.jcarousel-wrapper{
+	  position: relative;
+	  width: 940px;
+	  margin: 0 auto 86px;
+	  
+	  &__title {
+	  	font: 22px $font-leader;
+	  	color: $title-color;
+	  	text-align: center;
+	  	letter-spacing: 0px;
+	  	margin-bottom: 33px;
+	  }
+	}
+
+
+	 .jcarousel {
+	  margin: 0 auto;
+	  margin-bottom: 7px;
+	  display: inline-block;
+	  position: relative;
+	  width: 300px;
+	  height: 400px;
+	  overflow: hidden;
+	  	&--left {
+	  		left: -17px;
+	  	}
+		
+
+		&--right {
+			right: -16px;
+		}
+
+	  
+		&__list  {
+		  width: 20000em;
+		  position: relative;
+		  list-style: none;
+		  padding: 0;
+		  margin-bottom: 0px;	
+		}
+
+		&__slide {
+		  float: left;
+
+		}
+
+		&__image--mobile {
+		  	display: none;
+		  }
+		
+		&__image--tablet {
+			display: none;
+		}
+
+		&__image--desktop {
+		 width: 100%;
+		}
+	}
+
+ 
+
+	.jcarousel-control-prev,
+	.jcarousel-control-next {
+	  top: 157px;
+	  left: 21px;
+	  position: absolute;
+	  z-index: 3;
+	}
+
+	.jcarousel-control-next {
+			left: 249px; 
+
+	} 
+	.jcarousel-content {
+		position: absolute;
+		width: 89%;
+		top: 57.200000000000003%;
+		color: white;
+		left: 6.5%;
+		overflow: hidden;
+		text-align: left;;
+
+		&--step-two {
+			top: 64.700000000000003%;
+			left: 5.7%;
+		}
+
+		&__link{
+			width: 70px;
+			padding: 5px 2px;
+			background-color: $lead-color;
+			font: 10px $font-step;
+			cursor: pointer;
+			display: inline-block;
+			text-align: center;
+			position: relative;
+			border-radius: 10px;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+		}
+
+		&__link:hover {
+			background-color: $hover-color;
+		}
+
+		&__title {
+			font: 24px $font-leader;
+			padding-top: 14px;
+			letter-spacing: 0px;
+		}
+
+		&__subtitle {
+			font: 14px $font-slogan;
+			padding-top: 8px;
+		}
+	}
+
+	.partners {
+		width: 940px ;
+		margin: 0 auto 60px;
+		text-align: center ;
+		&__title {
+	  		margin: 30px 0 14px;
+			font: 22px $font-leader;
+	  		color: $title-color;
+	  		text-align: center;
+	  		letter-spacing: 0px;			
+		}
+
+		&__box {
+	  		margin: 0 auto;
+			display: inline-block;
+			margin-bottom: 16px;
+			height: 242px;
+			overflow: hidden;
+			width: $width-device / 4 - 1%;
+			top: 18px;
+	  		position: relative;
+	  		left: -14px;
+
+			&--bredley {
+				left: 17px;
+			}
+			&--heather {
+				margin-bottom: 7px;
+				top: 9px;
+				left: -3px;
+			}
+
+			&--lucas {
+				left: 6px;
+			}
+
+
+		}
+
+		&__sprite {
+			position: absolute;
+			display: inline-block;
+			top: 84px;
+			right: 48px;
+
+			&--first {
+				@include sprite($sprite1);
+			}
+
+			&--second {
+				@include sprite($sprite2);
+			}
+
+			&--third {
+				@include sprite($sprite3);
+			}
+
+			&--fourth {
+				@include sprite($sprite4);
+			}
+		}
+
+		&__name {
+			font: 14px $font-leader;
+			padding-top: 15px;
+		} 
+
+		&__description {
+			font: 14px $font-slogan;
+			padding: 12px 12px;
+			line-height: 17px;
+			width: 87.5%;;
+		}
+
+		&__ohter-partners {
+			display: block;
+			font: 14px $font-leader;
+			background-color: white;
+			border: 2px solid $lead-color;
+			border-radius: 19px;
+			color: $lead-color;
+			cursor: pointer;
+			width: 186px;
+			padding: 10px 0;
+			margin: 30px auto 0;
+
+		}
+		&__ohter-partners:hover {
+			border: 2px solid $hover-color;
+			background-color: $hover-color;
+			color: white;
+		}
+	}
+
+	.activity-grid {
+		text-align: center;
+		margin: 0 auto 94px;
+		height: 1068px;
+		width: 943px;
+
+		&__title {
+			font: 22px $font-leader;
+			padding-top: 34px;
+			padding-bottom: 28px;
+			letter-spacing: 0px;
+			color: #333333;
+		}
+
+		&--box {
+			height: 993px;
+		}
+	}
+	.grid {
+		max-width: 943px;
+		max-height: 975px;
+
+		&__item {
+		width: 300px;
+		float: left;
+		height: 310px;
+		margin: 9px 5px;
+		cursor: pointer;
+		border-radius: 6px;
+
+			&--text {
+				font: 22px $font-leader;
+				color: white;
+				position: relative;
+				top: 44%;
+			}
+			&--text3 {
+				top: 35%;
+			}
+			&--text1:after {
+				content: 'Sport and Activity';
+			}
+			&--text2:after {
+				content: 'Wellnes and Health';
+			}
+			&--text3:after {
+				width: 200px;;
+				content: 'Extreme Sports and Expeditions';
+			}
+			&--text4:after {
+				content: 'Games';
+			}
+			&--text5:after {
+				content: 'Culture and Education';
+			}
+			&--text6:after {
+				content: 'Relaxation';
+			}
+			&--text7:after {
+				content: 'Travelling';
+			}
+
+			&--text:hover {
+				color: $lead-color;
+				/*font-size: 24px;*/
+				@include transition (all 300ms ease-in);
+			}
+
+			&--width2 {
+				width: 620px;
+			}
+
+			&--outside {
+			}
+		}
+
+	}
+
+	.grid:after {
+ 		 content: '';
+  		display: block;
+  		clear: both;
+	}	
+
+	.search {
+		width: 100%;
+		position: relative;
+		height: 254px;
+		clear: both;
+		
+		&__box {
+				width: 940px;
+				margin: 0 auto;
+				position: relative;
+
+			
+
+			&__title {
+				font: 22px $font-leader;
+				letter-spacing: 0px;
+				color: #333333;
+				position: relative;
+				display: block;
+				padding-bottom: 0;
+
+			}
+
+			&__subtitle {
+				font: 18px $font-slogan;
+				display: inline-block;
+				width: 100%;
+				clear: both;
+				padding: 28px 0;
+			}
+
+			&__input {
+				width: 225px;
+				height: 38px;
+				border-radius: 5px;
+				border: 1px solid #e0dede;
+				padding-left: 10px;
+				display: inline-block;
+				position: relative;
+				left: -6px;
+			}
+
+			
+
+			&__submit {
+				width: 158px; 
+				height: 40px;
+				margin: 10px auto 0;
+				font: 14px $font-leader;
+				letter-spacing: 0.3px;
+				background-color: $lead-color;
+				border-radius: 18px;
+				cursor: pointer;
+				text-align: center;
+				border: 1px solid $lead-color;
+				color: white;
+			/*	position: relative;
+        		top: 10px;*/
+
+			}
+
+			&__submit:hover {
+				border: 1px solid $hover-color;
+				background-color: $hover-color;
+			}
+			&__input:focus {
+				outline: none;
+				@include box-shadow(rgba(138,136,138,1));
+			}
+
+			&__submit:focus {
+				outline: none;
+			}
+		}
+
+	}
+
+	.footer{
+		width: 100%;
+		border-top: 5px solid $lead-color;
+
+			&-box {
+				width: 940px;
+				margin: 0 auto;
+				height: 200px;
+
+			&__logo {
+				display: none;
+			}
+
+			&__logo--tablet {
+			position: relative;
+			top: 40px;
+			left: 32%;
+			}
+
+			&__title {
+				color: $lead-color ;
+				font: 16px $font-leader;
+				letter-spacing: 0.5px ;
+				float: left ;
+				padding: 38px 0.3% ; ;
+			}
+
+			&__nav-title {
+				font: 14px $font-leader;
+				color: $title-color;
+				float: left;;
+				position: relative;
+				padding-bottom: 13px;
+			}
+			&__nav-list {
+				padding-bottom: 10px;
+				clear: both;
+				left: 26%;
+				text-align: left;
+				position: relative;
+				top: -56px;
+				float: left;;
+			}
+
+			&__nav-item {
+				padding: 2px 5px;
+				clear: both;
+			}
+
+			&__nav-link {
+				font: 14px $font-slogan;
+				text-decoration: none;
+				color: $title-color * 2;
+			}
+
+			&__nav-link:hover {
+				color: $title-color;
+			}
+
+			&__partners {
+				font: 14px $font-leader;
+				color: $title-color;
+				display: inline-block;
+				left: -6.7%;
+				top: 10px;
+				position: relative;
+
+				 &--design {
+				 	display: none;
+				 	font: 10px $font-leader;
+				 	color: #333333 * 4;
+				 	padding: 13px 0 8px;
+				 	letter-spacing: 1.5px;
+				 }
+			}
+		}
+	}
+
+} 
+
+
+

@@ -1,0 +1,25 @@
+	@mixin display($flex) {
+
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+	};
+	@mixin transform($trans) {
+  -webkit-transform: $trans;
+     -moz-transform: $trans;
+      -ms-transform: $trans;
+          transform: $trans;
+}
+
+@mixin box-shadow($color) {
+	-webkit-box-shadow: 0px 0px 4px 1px $color;
+	  -moz-box-shadow: 0px 0px 4px 1px $color;
+		box-shadow: 0px 0px 4px 1px $color;
+}
+
+@mixin transition ($all) {
+	-webkit-transition: $all;
+	  transition: $all
+}
