@@ -81,6 +81,5 @@ gulp.task('default', gulpsync.sync([ 'delApp', 'imagemin', 'sprite', 'sprite-ret
 	function () {
 	var fontApp = gulp.src('dist/fonts/**/*')
 				.pipe(gulp.dest('app/fonts'));
-	var indexApp = gulp.src('dist/*.html')
-				.pipe(gulp.dest('app'));
+
 });
