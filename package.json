@@ -9,7 +9,6 @@
   "author": "Natali Shutenk0",
   "license": "ISC",
   "devDependencies": {
-    "concat": "0.0.1-security",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
