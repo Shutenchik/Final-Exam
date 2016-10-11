@@ -1089,7 +1089,6 @@
 		margin: 0 auto 94px;
 		background: url(../img/desktop/header-background.png) no-repeat;
 		@include background-size (cover);
-		
 
 		&__login {
 			top: 20px;
@@ -1137,14 +1136,11 @@
 				padding: 0px 30px 25px 25px;
 				display: none ;
 			}
-
 			&--title {
 
 				font: 52px Montserrat Bold, sans-serif;
 				text-transform: uppercase;
-
 				letter-spacing: 0.25px;
-
 				display: block;
 			}
 
@@ -1174,12 +1170,10 @@
 				width: 92%;
 			}
 		}
-
-		&__search-partners:hover {
-			background-color:  $hover-color;
-		}
-
+	&__search-partners:hover {
+	   background-color:  $hover-color;
 	}
+ }
 
 	.jcarousel-wrapper{
 	  position: relative;
