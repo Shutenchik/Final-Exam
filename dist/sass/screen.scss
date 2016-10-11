@@ -1087,8 +1087,9 @@
 		color: white;
 		background-position-x: center;
 		margin: 0 auto 94px;
-		@include background-size (cover);
 		background: url(../img/desktop/header-background.png) no-repeat;
+		@include background-size (cover);
+		
 
 		&__login {
 			top: 20px;
@@ -1097,6 +1098,7 @@
 			text-align: center;
 			height: 45px;
 			width: 940px;
+			margin: 0 auto;
 
 			&--logo {
 				font: 20px $font-leader;
@@ -1156,7 +1158,6 @@
 		&__search-partners {
 			height: 40px;
 			position: relative;
-			top: 166px;
 			font: 14px $font-leader;
 			letter-spacing: 0.3px;
 			background-color: $lead-color;
@@ -1165,6 +1166,7 @@
 			text-align: center;
 			width: 225px;
 			margin: 0 auto;
+			top: 121px;
 			
 			&--slogan {
 				letter-spacing: 0px;
