@@ -1074,20 +1074,21 @@
 	}
 
 	.wrapper {
-		width: 1440px;
+		width: 100%;
 		margin: 0 auto;
 		position: relative;
 		text-align: center;
-		background: url(../img/desktop/header-background.png) no-repeat;
 	}	
 	
 	.header-box {
+		width: 100%;
 		height: 690px;
 		position: relative;
 		color: white;
 		background-position-x: center;
-		width: 940px;
 		margin: 0 auto 94px;
+		@include background-size (cover);
+		background: url(../img/desktop/header-background.png) no-repeat;
 
 		&__login {
 			top: 20px;
@@ -1095,8 +1096,7 @@
 			position: relative;
 			text-align: center;
 			height: 45px;
-			float: right;
-			width: 100%;
+			width: 940px;
 
 			&--logo {
 				font: 20px $font-leader;
